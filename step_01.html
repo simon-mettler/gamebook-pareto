@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt Pareto</title>
+    <link rel="stylesheet" href="style.css">
+		<script>
+			let param = window.location.search.substr(1);
+			if (param.length == 4) {
+				var time = parseInt(param.substr(0,2));
+				var prob = parseInt(param.substr(2,4));
+			} else {
+				var time = 0;
+				var prob = 0;
+			} 
+			
+			/* 
+			let param = window.location.search.substr(1).split('&');
+			if (param.length == 2) {
+				var time = 100 - parseInt(param[0].substr(5));
+				var prob = 100 - parseInt(param[1].substr(5));
+			} else {
+				var time = 100;
+				var prob = 100;
+			} 
+			*/
+		</script>
+  </head>
+
+  <body>
+
+		<h1>Projekt Pareto</h1>
+
+		<span id="time"></span>
+		<span id="prob"></span>
+
+		<p>Du bist ein aufstrebender Gangster, der soeben vom Bandenchef befördert wurde. Du darfst zum ersten Mal einen Banküberfall planen. Als Neuling bist du recht aufgeregt, denn du hast noch keine Erfahrung in Projektplanung. Deine Aufgabe ist es, die Vorbereitung für den Überfall zu planen und die Aufgaben an deine Bandenmitglieder zu delegieren.</p>
+
+
+		<a class="button-wide" id="op1" href="">
+			Planung beginnen...
+		</a>
+
+		<script>
+    	document.getElementById("op1").href = "step_01.html?" + (time + 30).toString() + (prob + 10); 
+    	document.getElementById("time").innerHTML = 100 - time; 
+    	document.getElementById("prob").innerHTML = 100 - prob; 
+		</script>
+
+  </body>
+
+</html>
