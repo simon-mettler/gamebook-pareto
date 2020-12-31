@@ -5,22 +5,37 @@
     <meta charset="utf-8">
     <title>Projekt Pareto</title>
     <link rel="stylesheet" href="style.css">
+
+		<script>
+			let param = window.location.search.substr(1).split('I');
+			var time = 100 - parseInt(param[0]);
+			var prob = 100 - parseInt(param[1]);
+		</script>
+
   </head>
 
   <body>
 
 		<h1>Projekt Pareto</h1>
 
-		<p>Du bist ein aufstrebender Gangster, der soeben vom Bandenchef befördert wurde. Du darfst zum ersten Mal einen Banküberfall planen. Als Neuling bist du recht aufgeregt, denn du hast noch keine Erfahrung in Projektplanung. Deine Aufgabe ist es, die Vorbereitung für den Überfall zu planen und die Aufgaben an deine Bandenmitglieder zu delegieren.</p>
+		<span id="time"></span>
+		<span id="prob"></span>
 
-		<p>Der Überfall muss an einem bestimmten Tag stattfinden, denn die Ausstellung der britischen Kronjuwelen in der Bank of London geht zu Ende und du erhoffst dir für den letzten Tag der Ausstellung die grössten Chancen.</p>
+		<p>
+			Du bist ein aufstrebender Gangster, der soeben vom Bandenchef befördert wurde. Du darfst zum ersten Mal einen Banküberfall planen. 
+			Als Neuling bist du recht aufgeregt, denn du hast noch keine Erfahrung in Projektplanung. Deine Aufgabe ist es die Vorbereitung für 
+			den Überfall zu planen und an deine Bandenmitglieder die Aufgaben zu delegieren.<br><br>
+			Dir steht ein festgelegtes Zeitkontingent zur Verfügung, das du zur Planung nutzen kannst. Jede Aufgabe kann 
+			unterschiedlich aufwändig und daher zeitintensiv erledigt werden. Ist das Zeitkontingent aufgebraucht, aber noch nicht alle 
+			Vorbereitungen getroffen, stehst du vor der Entscheidung den Überfall trotz mangelnder Planung durchzuführen, oder abzusagen und 
+			den Zorn des Bandenchefs auf dich zu ziehen. Investierst du in die Planung zu wenig Zeit, wirst du zwar mit allen Aufgaben fertig, 
+			deine Planung ist aber zu unvollständig und die Erfolgschance des Überfalls verringert sich.
+		</p>
 
-		<p>Dir steht ein festgelegtes Zeitkontingent zur Verfügung, das du zur Planung nutzen kannst. Jede Aufgabe kann unterschiedlich aufwändig und daher zeitintensiv erledigt werden. Ist das Zeitkontingent aufgebraucht, aber noch nicht alle Vorbereitungen getroffen, stehst du vor der Entscheidung den Überfall trotz mangelnder Planung durchzuführen, oder abzusagen und den Zorn des Bandenchefs auf dich zu ziehen. Investierst du in die Planung zu wenig Zeit, wirst du zwar mit allen Aufgaben fertig, deine Planung ist aber zu unvollständig und die Erfolgschance des Überfalls verringert sich.</p>
-
-		<a class="button-wide" href="step_01.html?time=10">
-			Planung beginnen...
+		<a class="button-wide" id="op1" href="01.html?0I0">
+			<p>Projekt Pareto starten...</p>
 		</a>
 
-  </body>
+	<body>
 
 </html>

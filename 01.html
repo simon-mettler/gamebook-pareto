@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt Pareto</title>
+    <link rel="stylesheet" href="style.css">
+
+		<script>
+			let param = window.location.search.substr(1).split('I');
+			var time = 100 - parseInt(param[0]);
+			var prob = 100 - parseInt(param[1]);
+		</script>
+
+  </head>
+
+  <body>
+
+		<h1>Projekt Pareto</h1>
+
+		<span id="time"></span>
+		<span id="prob"></span>
+
+		<p>
+			Der Überfall muss an einem bestimmten Tag stattfinden, denn die Ausstellung der britischen Kronjuwelen in der Bank of London 
+			geht zu Ende und du erhoffst dir für den letzten Tag der Ausstellung die grössten Chancen aus.
+		</p>
+
+		<a class="button-wide" id="op1" href="">
+			<p>Ich habe noch genügend Zeit, ich lese zuerst meinen Krimi-Roman zu Ende. Dann komme ich auch sicher in die richtige Stimmung.</p>
+		</a>
+
+		<a class="button-wide" id="op2" href="">
+			<p>Ich habe gar keine Ahnung wie man in einem Projekt mit der Zeitplanung umgeht. Ich sollte mich zuerst damit beschäftigen.</p>
+		</a>
+
+		<script>
+    	document.getElementById("op1").href = "01o1.html?" +  (100 - time + 2) + "I" + (100 - prob + 0); 
+    	document.getElementById("op2").href = "01o2.html?" +  (100 - time + 2) + "I" + (100 - prob + 0); 
+    	document.getElementById("time").innerHTML = time; 
+    	document.getElementById("prob").innerHTML = prob; 
+		</script>
+
+  </body>
+
+</html>
