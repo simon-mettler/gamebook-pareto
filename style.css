@@ -1,0 +1,60 @@
+body { 
+	margin:150px auto 0 auto;
+	padding: 0 20px;
+	max-width: 666px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
+	animation: fadein 1.5s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+body > p {
+	margin-bottom: 50px;
+}
+
+.prob img {
+	width: 80px;
+	margin-left: 40px;
+}
+.time img {
+	width: 30px;
+}
+
+.prob,
+.time {
+	display: inline-block;
+}
+
+.status {
+	position: fixed;
+	right: 0;
+	top: 0;
+	margin: 40px 60px 0 0;
+}
+
+.status span {
+	transform: translateY(-7px);
+ 	display: inline-block;
+	font-size: 1.2em;
+	margin-left: 5px;
+}
+
+.button-wide {
+	display: block;
+	padding: 10px 30px;
+	text-decoration: none;
+	color: black;
+	background: rgb(230, 253, 255);
+	border: 1px solid rgb(143, 192, 196);
+	border-radius: 5px;
+	transition: background .3s;
+	margin-bottom: 30px;
+}
+
+.button-wide:hover {
+	color: white;
+	background: rgb(10, 139, 151);
+	border: 1px solid rgb(4, 130, 140);
+}
+
