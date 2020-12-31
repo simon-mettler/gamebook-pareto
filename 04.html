@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt Pareto</title>
+    <link rel="stylesheet" href="style.css">
+
+		<script>
+			let param = window.location.search.substr(1).split('I');
+			var time = 100 - parseInt(param[0]);
+			var prob = 100 - parseInt(param[1]);
+		</script>
+
+  </head>
+
+  <body>
+
+		<h1>Projekt Pareto</h1>
+
+		<span id="time"></span>
+		<span id="prob"></span>
+
+		<p> 
+			Nun, da du die Gebäudepläne hast, kannst du dich dem tatsächlichen Ablauf deines Coups widmen. 
+			Hier stellt sich die Frage, wie viel Aufmerksamkeit du diesem Aspekt widmen möchtest:<br><br>
+			Du könntest natürlich einfach auf den Überraschungseffekt setzen und ein Loch in die Aussenmauer der 
+			(vermeintlich) richtigen Wand der Bank sprengen und so an die Kronjuwelen gelangen. Dieser 
+			Ansatz erscheint zwar relativ plump, hat jedoch bei vorherigen Raubüberfällen durchaus auch schon funktioniert. 
+			Zudem wäre der Planungsaufwand relativ gering. Jedoch gibt es in der langen Geschichte der Banküberfälle 
+			auch mehr als genug Negativbeispiele.<br><br>
+			Wesentlich risikoärmer und auch eleganter wäre der Weg über das Lüftungssystem. So könntest du dich 
+			ungesehen an den Wachen vorbei schleichen ohne gross Spuren zu hinterlassen. Damit dieser Plan gelingt ist 
+			dafür aber eine minutiöse Planung unabdingbar. Welchen Plan möchtest du in die Tat umsetzen?
+		</p>
+
+		<a class="button-wide" id="op1" href="">
+			<p>Hauptsache laut. Ich sprenge die Wand auf!</p>
+		</a>
+
+		<a class="button-wide" id="op2" href="">
+			<p>Wir sollten so lange wie möglich unentdeckt bleiben. Den Zeitaufwand nehme ich in Kauf...</p>
+		</a>
+
+		<script>
+    	document.getElementById("op1").href = "05.html?" +  (100 - time + 3) + "I" + (100 - prob + 12); 
+    	document.getElementById("op2").href = "05.html?" +  (100 - time + 10) + "I" + (100 - prob + 0); 
+    	document.getElementById("time").innerHTML = time; 
+    	document.getElementById("prob").innerHTML = prob; 
+		</script>
+
+  </body>
+
+</html>

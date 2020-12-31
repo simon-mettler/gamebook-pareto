@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt Pareto</title>
+    <link rel="stylesheet" href="style.css">
+
+		<script>
+			let param = window.location.search.substr(1).split('I');
+			var time = 100 - parseInt(param[0]);
+			var prob = 100 - parseInt(param[1]);
+		</script>
+
+  </head>
+
+  <body>
+
+		<h1>Projekt Pareto</h1>
+
+		<span id="time"></span>
+		<span id="prob"></span>
+
+		<p> 
+			Die Vorbereitungen sind abgeschlossen. Du hast die Pläne des Gebäudes studiert, hast dir eine Strategie 
+			überlegt wie du in die Bank gelangst und hast auch das nötige Material besorgt. Heute ist der letzte Tag 
+			der Ausstellung der Kronjuwelen. Der Überfall muss heute stattfinden.
+		</p>
+
+		<a class="button-wide" id="op1" href="">
+			<p>Mein Team und ich sind bereit. Es kann losgehen!</p>
+		</a>
+
+		<script>
+    	document.getElementById("op1").href = "final.html?" +  (100 - time + 0) + "I" + (100 - prob + 0); 
+    	document.getElementById("time").innerHTML = time; 
+    	document.getElementById("prob").innerHTML = prob; 
+		</script>
+
+  </body>
+
+</html>

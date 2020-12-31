@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt Pareto</title>
+    <link rel="stylesheet" href="style.css">
+
+		<script>
+			let param = window.location.search.substr(1).split('I');
+			var time = 100 - parseInt(param[0]);
+			var prob = 100 - parseInt(param[1]);
+		</script>
+
+  </head>
+
+  <body>
+
+		<h1>Projekt Pareto</h1>
+
+		<span id="time"></span>
+		<span id="prob"></span>
+
+		<p>
+			Vilfredo Pareto (1848-1923) war ein italienischer Ingenieur, Ökonom und Soziologe. 
+			In Turin absolvierte er ein Studium als Ingenieur und arbeitete für eine Eisenbahngesellschaft 
+			und ein Eisenhüttenwerk. 1893 wurde er an den Lehrstuhl für Wirtschaftswissenschaften 
+			an der Universität Lausanne berufen. Später wandte er sich der Soziologie zu und zog nach 
+			Céligny am Genfersee. Dort starb er 1923.
+		</p>
+
+		<a class="button-wide" id="op1" href="">
+			<p>Interessant, gibt es noch mehr herauszufinden?</p>
+		</a>
+
+		<script>
+    	document.getElementById("op1").href = "02.html?" +  (100 - time + 0) + "I" + (100 - prob + 0); 
+    	document.getElementById("time").innerHTML = time; 
+    	document.getElementById("prob").innerHTML = prob; 
+		</script>
+
+  </body>
+
+</html>

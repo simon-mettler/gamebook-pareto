@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt Pareto</title>
+    <link rel="stylesheet" href="style.css">
+
+		<script>
+			let param = window.location.search.substr(1).split('I');
+			var time = 100 - parseInt(param[0]);
+			var prob = 100 - parseInt(param[1]);
+		</script>
+
+  </head>
+
+  <body>
+
+		<h1>Projekt Pareto</h1>
+
+		<span id="time"></span>
+		<span id="prob"></span>
+
+		<p>
+			Die Bank of London wird gut gesichert sein. Es ist daher wichtig die Grundrisse des Gebäudes zu kennen. 
+			Nur so lässt sich der geeignetste Weg in die Ausstellungsräume im gesicherten Bereich der Bank finden.
+		</p>
+
+		<a class="button-wide" id="op1" href="">
+			<p>
+			 Du weisst, dass du die aktuellen Gebäudepläne im staatlichen Bauarchiv der Stadt London bekommen kannst. 
+			 Du weisst jedoch auch, dass du die Pläne nicht einfach so bekommst, da zuerst ein Antrag gestellt werden muss, 
+			 welcher mehrmals geprüft wird.
+			</p>
+		</a>
+
+		<a class="button-wide" id="op2" href="">
+			<p>
+				Du könntest jedoch auch Zeit sparen und im Internet nach einem Plan suchen. Da wird sich bestimmt etwas finden...
+			</p>
+		</a>
+
+		<script>
+    	document.getElementById("op1").href = "03o1.html?" +  (100 - time + 10) + "I" + (100 - prob + 0); 
+    	document.getElementById("op2").href = "03o2.html?" +  (100 - time + 4) + "I" + (100 - prob + 10); 
+    	document.getElementById("time").innerHTML = time; 
+    	document.getElementById("prob").innerHTML = prob; 
+		</script>
+
+  </body>
+
+</html>

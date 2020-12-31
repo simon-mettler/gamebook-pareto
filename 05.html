@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt Pareto</title>
+    <link rel="stylesheet" href="style.css">
+
+		<script>
+			let param = window.location.search.substr(1).split('I');
+			var time = 100 - parseInt(param[0]);
+			var prob = 100 - parseInt(param[1]);
+		</script>
+
+  </head>
+
+  <body>
+
+		<h1>Projekt Pareto</h1>
+
+		<span id="time"></span>
+		<span id="prob"></span>
+
+		<p> 
+			Bei der Materialbeschaffung stehen dir wiederum zwei Optionen zur Verfügung: <br><br>
+			Einerseits kannst du auf deinen Kindheitsfreund Vito, welcher als Hehler tätig ist, zurückgreifen. 
+			Vito hat in der Vergangenheit öfters schon mit Einbruchswerkzeug gehandelt und wäre auch einfach 
+			zugänglich. Jedoch ist Vito, was die Qualität und die rechtzeitige Lieferung betrifft, ein Risiko. 
+			Schliesslich handelt es sich ja um Hehlerware, bei welcher der Ursprung schwierig nachvollziehbar ist. <br><br>
+			Die andere Option wäre der berüchtigte Einbruchsspezialist Boris, Mitglied der tschetschenischen Mafia, welcher 
+			stets das neuste High-Tech-Material zur Hand hat. Jedoch dauert die Lieferung von Grozny nach London deutlich länger,
+			was sich wiederum deutlich auf dein Zeitkontingent auswirken würde. Dafür sind die Erfolgschancen mit Boris’ Einbruchsmaterial 
+			höher.<br><br> Für welche Option entscheidest du dich?
+		</p>
+
+		<a class="button-wide" id="op1" href="">
+			<p>Ich will nur die beste Qualität. Dafür wende ich gerne auch etwas mehr Zeit auf. Ich bestelle bei Boris.</p>
+		</a>
+
+		<a class="button-wide" id="op2" href="">
+			<p>Vito wird das Material schon rechtzeitig bringen...</p>
+		</a>
+
+		<script>
+    	document.getElementById("op1").href = "06.html?" +  (100 - time + 13) + "I" + (100 - prob + 0); 
+    	document.getElementById("op2").href = "06.html?" +  (100 - time + 2) + "I" + (100 - prob + 9); 
+    	document.getElementById("time").innerHTML = time; 
+    	document.getElementById("prob").innerHTML = prob; 
+		</script>
+
+  </body>
+
+</html>

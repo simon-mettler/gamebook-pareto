@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt Pareto</title>
+    <link rel="stylesheet" href="style.css">
+
+		<script>
+			let param = window.location.search.substr(1).split('I');
+			var time = 100 - parseInt(param[0]);
+			var prob = 100 - parseInt(param[1]);
+		</script>
+
+  </head>
+
+  <body>
+
+		<h1>Projekt Pareto</h1>
+
+		<span id="time"></span>
+		<span id="prob"></span>
+
+		<p>
+			Das Paretoprinzip (auch Pareto-Effekt oder 80 zu 20 Regel) erfreut sich in der Projektplanung 
+			und im Management grosser Popularität. Die Hauptaussage besteht darin, dass man mit 20% des 
+			Einsatzes bereits 80% des Erfolgs erzielen kann. Für das Zeitmanagement bedeutet das, dass man 
+			wichtige Arbeitsbausteine identifiziert, die für den Erfolg nötig sind und die anderen Bausteine, 
+			die 80% des Aufwandes aber nur 20% des Erfolgs ausmachen, auslässt oder verschiebt.
+		</p>
+
+		<a class="button-wide" id="op1" href="">
+			<p>Interessant, gibt es noch mehr herauszufinden?</p>
+		</a>
+
+		<script>
+    	document.getElementById("op1").href = "02.html?" +  (100 - time + 0) + "I" + (100 - prob + 0); 
+    	document.getElementById("time").innerHTML = time; 
+    	document.getElementById("prob").innerHTML = prob; 
+		</script>
+
+  </body>
+
+</html>
