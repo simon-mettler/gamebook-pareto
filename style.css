@@ -5,36 +5,55 @@ body {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
 	animation: fadein 1.5s;
 }
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
 body > p {
 	margin-bottom: 50px;
 }
 
 .prob img {
 	width: 80px;
-	margin-left: 40px;
 }
+
 .time img {
 	width: 30px;
 }
 
 .prob,
 .time {
-	display: inline-block;
+	float: right;
+}
+
+.prob span {
+	transform: translateY(-7px);
+	margin: 5px 31px 0 0;
+}
+
+.time img {
+	transform: translateY(5px);
 }
 
 .status {
 	position: fixed;
 	right: 0;
 	top: 0;
-	margin: 40px 60px 0 0;
+	padding: 40px 50px 0 0;
+	width: 100%;
+}
+
+@media screen and (max-width: 1150px) {
+	.status {
+		background: white;
+		padding: 18px 38px 15px 0;
+		box-shadow: 5px 5px 20px -7px #000000;
+	}
 }
 
 .status span {
-	transform: translateY(-7px);
  	display: inline-block;
 	font-size: 1.2em;
 	margin-left: 5px;
