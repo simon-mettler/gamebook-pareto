@@ -29,17 +29,23 @@
 			</div>
 		</div>
 
-		<p> 
-		((Schlusstext, Hinweise Pareto/Projektmanagement))
-		</p>
+		<p id="text"></p>
+
+		<p>Gutes Gelingen und wir hoffen, du konntest etwas über das Pareto-Prinzip lernen!</p>
 
 		<a class="button-wide" id="op1" href="index.html">
-			<p>Zurueck an den Start</p>
+			<p>Ich möchte erneut mit der Planung beginnen...</p>
 		</a>
 
 		<script>
     	document.getElementById("time").innerHTML = time; 
     	document.getElementById("prob").innerHTML = prob; 
+			if (prob < 46) {
+				document.getElementById("text").innerHTML = "Die Wahrscheinlichkeit, dass du und dein Team entkommen liegt bei " + prob + " Prozent. Ihr habt zwar noch " + time + " Prozent der Zeit zur Verfügung, die Erfolgschangen sehen jedoch wirklich schlecht aus... Ob der Überfall gelingen wird scheint reine Glückssache zu sein, vielleicht schaust du dir das Pareto-Prinzip noch einmal genauer an.";
+			} else if (prob < 70) {
+				document.getElementById("text").innerHTML = "Deine Planung scheint ziemlich ausgeglichen zu sein, bravo! Trotzdem hättest du die Erfolgschangen von " + prob + " Prozent mit der Anwendung des Pareto Prinzips ein wenig erhöhen können, Zeit hattest du ja noch zur Verfügung...";
+			} else {
+				document.getElementById("text").innerHTML = "Bravo, die Wahrscheinlichkeit, dass du und dein Team entkommen könnt liegt bei " + prob + " Prozent, nicht schlecht! Du scheinst das Pareto-Prinzip begriffen zu haben. Zudem bleiben dir noch " + time + " Prozent der Zeit. Denk jedoch beim nächsten Mal daran, dass ein kleiner Zeitpuffer immer (vorallem bei einem Überfall bei dem viel schiefgehen könnte) nützlich ist."; }
 		</script>
 
   </body>
